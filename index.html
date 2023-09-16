@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="./jquery_3.7.1_jquery.min.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<header>
+		<div class="nav" id="sandwich-nav">
+			<a href="/" class="logo"></a>
+			<ul class="menu">
+				<li class="active">Download</li>
+				<li>Learn more</li>
+				<li>Pricing</li>
+				<li>
+					<a href="/help">
+						Help
+					</a>
+				</li>
+				<li>
+					<a href="" class="bordered">Account</a>
+				</li>
+			</ul>
+			<div class="" id="sandwitch">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="nav-border"></div>
+	</header>
+	<div class="container">
+		<div class="panel">
+			<div class="form">
+				<h1>Checkout</h1>
+				<div class="section">
+					<h3><span class="rounded">1</span>Your Basic Information</h3>
+					<div class="flex-group">
+						<div class="form-group">
+							<label>First Name</label>
+							<input type="text" class="form-control" placeholder="Jhon" />
+						</div>
+						<div class="form-group">
+							<label>Last Name</label>
+							<input type="text" class="form-control" placeholder="Doe" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label>E-mail</label>
+						<input type="text" class="form-control" placeholder="janedoe@example.com" />
+					</div>
+				</div>
+				<div class="section">
+					<h3><span class="rounded">2</span>Your Payment Information</h3>
+					<div class="form-group">
+						<label>Credit Card</label>
+						<div class="flex-group">
+							<input type="text" class="form-control rm-border-r w-70" placeholder="Card Number" />
+							<input type="text" class="form-control rm-border w-15" placeholder="MM / YY" max="4" />
+							<input type="text" class="form-control rm-border-l w-15" placeholder="CVC" />
+						</div>
+					</div>
+				</div>
+				<button class="btn-submit">Buy WP Pusher</button>
+				<div class="support"><span class="rounded support-rounded">?</span><b>Need any help?</b> Don’t hesitate to
+					contact support!</div>
+				<div class="center-component"><span class="powered">Powered by <b>stripe</b></span></div>
+			</div>
+			<div class="sidebar">
+				<h3>Freelancer</h3>
+				<div class="price">
+					<sup>$</sup>
+					<span>99</span>
+					<span>/ year</span>
+				</div>
+				<div class="i">Automatically renews  after 1 year</div>
+				<div class="p-detail">
+					<ul>
+						<li><span class="rounded detail-rounded">x</span> Use on 5 client sites</li>
+						<li><span class="rounded detail-rounded">x</span> Private repositories</li>
+						<li><span class="rounded detail-rounded">x</span> Email support</li>
+					</ul>
+				</div>
+				<div class="line"></div>
+				<div class="quote">
+					"Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).This means that we must make some changes in our CSS."
+					<div class="person">
+						<img src="/Bitmap.png" /> <span class="name">Kirk Beard</span> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	function log(param) {
+		console.log(param);
+		console.log('=========end=========');
+	}
+	var lastScrollTop = 0;
+
+	$("#sandwitch").click(function () {
+		let open = $(this).hasClass('open')
+		if (open) {
+			log('remove')
+			$('.nav').removeClass('open')
+			$(this).removeClass('open')
+			$('.menu').css({ left: '-100vw', transition: '.5s ease-in-out' })
+		} else {
+			$(this).addClass('open')
+			$('.nav').addClass('open')
+			$('.menu').css({ left: '0vw', transition: '.5s ease-in-out' })
+		}
+	})
+</script>
+
+</html>
